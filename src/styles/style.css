@@ -1,0 +1,111 @@
+:root {
+  --color-primary: #FA7921;
+  --color-secondary: #FAB521;
+  --color-tertiary: #E31E53;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+[class*="-heading"] {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 900;
+  color: var(--color-primary);
+  margin: 16px 0;
+  width: fit-content;
+}
+
+[class*="-subheading"] {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--color-tertiary);
+  margin: 8px 0;
+  width: fit-content;
+}
+
+.button-custom {
+  padding: 10px 30px;
+  margin: 10px;
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: inherit;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.button-custom:hover {
+  background-color: var(--color-tertiary);
+}
+
+.button-custom-delete {
+  margin: 5px;
+  background-color: var(--color-tertiary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: inherit;
+  border-radius: 4px;
+}
+
+.button-custom-edit {
+  margin: 5px;
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: inherit;
+  border-radius: 4px;
+}
+
+.button-theme {
+  padding: 8px 8px;
+  margin: 10px;
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: inherit;
+  transition: background-color 0.3s ease;
+  border-radius: 100%;
+}
+
+.button-theme:hover {
+  background-color: var(--color-tertiary);
+}
+
+.b-main-page {
+  width: 200px;
+  display: block;
+}
+
+.redirect-custom {
+  color: var(--color-secondary);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+header {
+  background-color: var(--color-primary);
+
+}
+
+.title-header {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  width: fit-content;
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centro Medico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Poppins:wght@500&family=Raleway:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <link href="../../styles/style.css" rel="stylesheet" />
+  </head>
+
+  <body style="display: flex; flex-direction: column; min-height: 100vh">
+    <!--HEADER-->
+    <header class="d-flex align-items-center justify-content-center py-3">
+      <h1 class="title-header"><a href="../../index.html">Centro Medico</a></h1>
+      <button id="botonTheme" class="button-theme" onclick="cambiarColores()">
+        <img src="../../assets/icon/icons8-first-quarter-moon-24.png">
+      </button>
+    </header>
+
+    <!--MAIN-->
+    <main class="my-5" style="flex-grow: 1">
+      <div class="container">
+        <h1 class="text-heading" style="width: fit-content">
+          Ofrece un servicio personalizado a tus pacientes.
+        </h1>
+        <h6 style="width: fit-content; font-size: 1.5rem">
+          Gestiona tus interacciones de manera eficiente y proporciona un apoyo
+          adaptado a las necesidades individuales de tus pacientes.
+        </h6>
+      </div>
+
+      <div class="table-responsive" style="width: 80%; margin: auto">
+        <h2 class="pb-2 mb-5 border-bottom text-subheading">
+          Gestiona tus Interacciones :
+        </h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th style="text-align: center">#</th>
+              <th style="text-align: center">Paciente</th>
+              <th style="text-align: center">Ultimo Contacto</th>
+              <th style="text-align: center">Accion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="text-align: center">1</th>
+              <td style="text-align: center">Miguel Hernandez</td>
+              <td style="text-align: center">Mi-12:45</td>
+              <td style="text-align: center">
+                <button
+                  class="button-custom"
+                  onclick="window.location.href='chatHernandez.html'"
+                >
+                  Ver Chat
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" style="text-align: center">2</th>
+              <td style="text-align: center">Alejandra Acuña</td>
+              <td style="text-align: center">Mi-13:04</td>
+              <td style="text-align: center">
+                <button
+                  class="button-custom"
+                  onclick="window.location.href='chatAcuña.html'"
+                >
+                  Ver Chat
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="container">
+        <h2 class="pb-2 mb-5 border-bottom text-subheading">Mas Acciones :</h2>
+        <button id="botonEditar" class="button-custom">Editar Perfil</button>
+
+        <div class="container mt-3" id="editarDiv" style="display: none">
+          <form class="col-md-6 p-5 shadow-lg">
+            <h3>Ingresa tus nuevos datos:</h3>
+            <div class="form-group my-2">
+              <label>Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nuevo Nombre"
+              />
+            </div>
+            <div class="form-group my-2">
+              <label>Años experiencia</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Cantidad años"
+              />
+            </div>
+            <div class="form-group my-2">
+              <label>Valor Hora</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Monto por hora"
+              />
+            </div>
+
+            <button
+              type="button"
+              class="button-custom"
+              data-bs-toggle="modal"
+              data-bs-target="#EditarDatosModal"
+            >
+              Guardar
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="EditarDatosModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="EditarDatosModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-subheading" id="EditarDatosModalLabel">Editar Datos</h5>
+            </div>
+            <div class="modal-body">Los datos fueron modificados con exito!</div>
+            <div class="modal-footer">
+              <button class="button-custom" onclick="window.location.href='profesional.html'" >Cerrar</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--FOOTER-->
+    <div id="pie_de_página">
+      <footer
+        class="d-flex flex-wrap justify-content-around align-items-center py-3 my-0 border-top"
+      >
+        <div class="col-md-4 d-flex align-items-center">
+          <a
+            href="/"
+            class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+          >
+            <svg class="bi" width="30" height="24">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <h6 class="mb-3 mb-md-0" style="font-weight: 700">
+            © 2000-2023 Centro Medico
+          </h6>
+          <svg class="bi" width="32" height="32" fill="currentColor">
+            <use xlink:href="bootstrap-icons.svg#heart-fill" />
+          </svg>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <img
+              src="../../assets/icon/facebook.svg"
+              alt="Bootstrap"
+              width="24"
+              height="24"
+            />
+          </li>
+          <li class="ms-3">
+            <img
+              src="../../assets/icon/whatsapp.svg"
+              alt="Bootstrap"
+              width="24"
+              height="24"
+            />
+          </li>
+          <li class="ms-3">
+            <img
+              src="../../assets/icon/instagram.svg"
+              alt="Bootstrap"
+              width="24"
+              height="24"
+            />
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <!--Fin index-->
+  </body>
+</html>
+<script>
+  document.getElementById("botonEditar").addEventListener("click", function () {
+    var editarDiv = document.getElementById("editarDiv");
+    if (editarDiv.style.display === "none") {
+      editarDiv.style.display = "block";
+    } else {
+      editarDiv.style.display = "none";
+    }
+  });
+</script>
+<script>
+  var myModal = new bootstrap.Modal(document.getElementById("EditarDatosModal"));
+
+  document.getElementById("btnGuardar").addEventListener("click", function () {
+    myModal.show();
+  });
+</script>
+<script>
+  function cambiarColores() {
+    document.querySelector("body").style.backgroundColor = "#141d26";
+    var elementos = document.querySelectorAll("p,h3,h6,span,label");
+    for (var i = 0; i < elementos.length; i++) {
+      elementos[i].style.color = "white";
+    }
+    var boton = document.getElementById("botonTheme");
+    boton.onclick = restaurarColores;
+  }
+
+  function restaurarColores() {
+    document.querySelector("body").style.backgroundColor = "white";
+    var elementos = document.querySelectorAll("p,h3,h6,span,label");
+    for (var i = 0; i < elementos.length; i++) {
+      elementos[i].style.color = "black";
+    }
+    var boton = document.getElementById("botonTheme");
+    boton.onclick = cambiarColores;
+  }
+</script>
